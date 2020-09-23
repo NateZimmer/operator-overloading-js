@@ -85,48 +85,49 @@ overload(function () {
 Following are the operators which can be overloaded with the desired overload function name:
 
 
-| S.No | Operator | Function Name | Operator Type |
-|------|----------|---------------|---------------|
-| 1 | + | __plus | Binary |
-| 2 | == | __doubleEqual | Binary |
-| 3 | === | __tripleEqual | Binary |
-| 4 | \|\| | __logicalOR | Binary |
-| 5 | && | __logicalAND | Binary |
-| 6 | \| | __bitwiseOR | Binary |
-| 7 | ^ | __bitwiseXOR | Binary |
-| 8 | & | __bitwiseAND | Binary |
-| 9 | != | __notEqual | Binary |
-| 10 | !== | __notDoubleEqual | Binary |
-| 11 | < | __lessThan | Binary |
-| 12 | > | __greaterThan | Binary |
-| 13 | <= | __lessThanEqual | Binary |
-| 14 | >= | __greaterThanEqual | Binary |
-| 15 | in | __in | Binary |
-| 16 | instanceof | __instanceOf | Binary |
-| 17 | << | __bitwiseLSHIFT | Binary |
-| 18 | >> | __bitwiseRSHIFT | Binary |
-| 19 | >>> | __zeroFillRSHIFT | Binary |
-| 20 | - | __minus | Binary |
-| 21 | * | __multiply | Binary |
-| 22 | % | __modulus | Binary |
-| 23 | / | __divide | Binary |
-| 24 | u- | __unaryNegation | Unary |
-| 25 | u+ | __unaryAddition | Unary |
-| 26 | ~ | __bitwiseNOT | Unary |
-| 27 | ++ | __increment | Unary |
-| 28 | -- | __decrement | Unary |
-| 29 | ! | __unaryNOT | Unary |
-| 30 | += | __addAssign | Assignment |
-| 31 | -= | __minusAssign | Assignment |
-| 32 | *= | __multiplyAssign | Assignment |
-| 33 | /= | __divideAssign | Assignment |
-| 34 | %= | __modulusAssign | Assignment |
-| 35 | <<= | __leftShiftAssign | Assignment |
-| 36 | >>= | __rightShiftAssign | Assignment |
-| 37 | >>>= | __zeroFillRightShiftAssign | Assignment |
-| 38 | &= | __andAssign | Assignment |
-| 39 | \|= | __orAssign | Assignment |
-| 40 | ^= | __xorAssign | Assignment |
+| Operator | Function Name | Operator Type |
+|----------|---------------|---------------|
+| + | __plus | Binary |
+| == | __doubleEqual | Binary |
+| === | __tripleEqual | Binary |
+| \|\| | __logicalOR | Binary |
+| && | __logicalAND | Binary |
+| \| | __bitwiseOR | Binary |
+| ^ | __bitwiseXOR | Binary |
+| & | __bitwiseAND | Binary |
+| != | __notEqual | Binary |
+| `**` | __exponent | Binary | 
+| !== | __notDoubleEqual | Binary |
+| < | __lessThan | Binary |
+| > | __greaterThan | Binary |
+| <= | __lessThanEqual | Binary |
+| >= | __greaterThanEqual | Binary |
+| in | __in | Binary |
+| instanceof | __instanceOf | Binary |
+| << | __bitwiseLSHIFT | Binary |
+| >> | __bitwiseRSHIFT | Binary |
+| >>> | __zeroFillRSHIFT | Binary |
+| - | __minus | Binary |
+| * | __multiply | Binary |
+| % | __modulus | Binary |
+| / | __divide | Binary |
+| u- | __unaryNegation | Unary |
+| u+ | __unaryAddition | Unary |
+| ~ | __bitwiseNOT | Unary |
+| ++ | __increment | Unary |
+| -- | __decrement | Unary |
+| ! | __unaryNOT | Unary |
+| += | __addAssign | Assignment |
+| -= | __minusAssign | Assignment |
+| *= | __multiplyAssign | Assignment |
+| /= | __divideAssign | Assignment |
+| %= | __modulusAssign | Assignment |
+| <<= | __leftShiftAssign | Assignment |
+| >>= | __rightShiftAssign | Assignment |
+| >>>= | __zeroFillRightShiftAssign | Assignment |
+| &= | __andAssign | Assignment |
+| \|= | __orAssign | Assignment |
+| ^= | __xorAssign | Assignment |
 
 
 ##Design Consideration / Very IMP / Must Read##
