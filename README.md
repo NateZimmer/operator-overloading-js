@@ -81,62 +81,62 @@ overload(function () {
 
 ```
 
-## Overloadable Operators##
+##Overloadable Operators##
 Following are the operators which can be overloaded with the desired overload function name:
 
 
-| Operator | Function Name | Operator Type |
-|----------|---------------|---------------|
-| + | __plus | Binary |
-| == | __doubleEqual | Binary |
-| === | __tripleEqual | Binary |
-| \|\| | __logicalOR | Binary |
-| && | __logicalAND | Binary |
-| \| | __bitwiseOR | Binary |
-| ^ | __bitwiseXOR | Binary |
-| & | __bitwiseAND | Binary |
-| != | __notEqual | Binary |
-| `**` | __exponent | Binary | 
-| !== | __notDoubleEqual | Binary |
-| < | __lessThan | Binary |
-| > | __greaterThan | Binary |
-| <= | __lessThanEqual | Binary |
-| >= | __greaterThanEqual | Binary |
-| in | __in | Binary |
-| instanceof | __instanceOf | Binary |
-| << | __bitwiseLSHIFT | Binary |
-| >> | __bitwiseRSHIFT | Binary |
-| >>> | __zeroFillRSHIFT | Binary |
-| - | __minus | Binary |
-| * | __multiply | Binary |
-| % | __modulus | Binary |
-| / | __divide | Binary |
-| u- | __unaryNegation | Unary |
-| u+ | __unaryAddition | Unary |
-| ~ | __bitwiseNOT | Unary |
-| ++ | __increment | Unary |
-| -- | __decrement | Unary |
-| ! | __unaryNOT | Unary |
-| += | __addAssign | Assignment |
-| -= | __minusAssign | Assignment |
-| *= | __multiplyAssign | Assignment |
-| /= | __divideAssign | Assignment |
-| %= | __modulusAssign | Assignment |
-| <<= | __leftShiftAssign | Assignment |
-| >>= | __rightShiftAssign | Assignment |
-| >>>= | __zeroFillRightShiftAssign | Assignment |
-| &= | __andAssign | Assignment |
-| \|= | __orAssign | Assignment |
-| ^= | __xorAssign | Assignment |
+| S.No | Operator | Function Name | Operator Type |
+|------|----------|---------------|---------------|
+| 1 | + | __plus | Binary |
+| 2 | == | __doubleEqual | Binary |
+| 3 | === | __tripleEqual | Binary |
+| 4 | \|\| | __logicalOR | Binary |
+| 5 | && | __logicalAND | Binary |
+| 6 | \| | __bitwiseOR | Binary |
+| 7 | ^ | __bitwiseXOR | Binary |
+| 8 | & | __bitwiseAND | Binary |
+| 9 | != | __notEqual | Binary |
+| 10 | !== | __notDoubleEqual | Binary |
+| 11 | < | __lessThan | Binary |
+| 12 | > | __greaterThan | Binary |
+| 13 | <= | __lessThanEqual | Binary |
+| 14 | >= | __greaterThanEqual | Binary |
+| 15 | in | __in | Binary |
+| 16 | instanceof | __instanceOf | Binary |
+| 17 | << | __bitwiseLSHIFT | Binary |
+| 18 | >> | __bitwiseRSHIFT | Binary |
+| 19 | >>> | __zeroFillRSHIFT | Binary |
+| 20 | - | __minus | Binary |
+| 21 | * | __multiply | Binary |
+| 22 | % | __modulus | Binary |
+| 23 | / | __divide | Binary |
+| 24 | u- | __unaryNegation | Unary |
+| 25 | u+ | __unaryAddition | Unary |
+| 26 | ~ | __bitwiseNOT | Unary |
+| 27 | ++ | __increment | Unary |
+| 28 | -- | __decrement | Unary |
+| 29 | ! | __unaryNOT | Unary |
+| 30 | += | __addAssign | Assignment |
+| 31 | -= | __minusAssign | Assignment |
+| 32 | *= | __multiplyAssign | Assignment |
+| 33 | /= | __divideAssign | Assignment |
+| 34 | %= | __modulusAssign | Assignment |
+| 35 | <<= | __leftShiftAssign | Assignment |
+| 36 | >>= | __rightShiftAssign | Assignment |
+| 37 | >>>= | __zeroFillRightShiftAssign | Assignment |
+| 38 | &= | __andAssign | Assignment |
+| 39 | \|= | __orAssign | Assignment |
+| 40 | ^= | __xorAssign | Assignment |
+| 41 | `**` | __exponent | Binary |
 
 
-## Design Consideration / Very IMP / Must Read##
+##Design Consideration / Very IMP / Must Read##
 
 It is **very important** that we **DON'T modify the natural language**. Hence the overloading feature will only be available in the specific code blocks where you intend to use it. Also marking them will make core readable for future developers giving them hint that this block has **operator overloading enabled**.
 
 Also operator overloading ***only applies to lexical scope***, no used or inherited objects are enriched. This is important for code security and assurance of natural operation.
 
-### Defining the context for using operator-overloading##
+###Definig the context for using operator-overloading##
 
 You need to specify a function and mark it such that operator overloading is enabled for code only in lexical scope of that function body.
 
@@ -222,7 +222,7 @@ overload(function(a){
 ```
 
 
-## Usage Guide##
+##Usage Guide##
 
 There are two steps required to use operator overloading:
 1. Define overloading methods for operators intended to overload.
@@ -315,7 +315,7 @@ function MyClass(){
 };
 ```
 
-### Using the overloaded operators###
+###Using the overloaded operators###
 
 Whatever function is transformed via `overload` is eligible for operator overloading.
 
@@ -331,10 +331,10 @@ overload(function(a){
 ```
 
 
-## Examples##
+##Examples##
 Some examples:
 
-### Simple Student Constructor###
+###Simple Student Constructor###
 The same example we have shown above.
 ```javascript
 var overload = require('operator-overloading');
@@ -373,7 +373,7 @@ overload(function () {
 ```
 
 
-### Function Callback Fun###
+###Function Callback Fun###
 Just a **fun** way to pass callbacks. Just a demonstration experiment.
 
 ```javascript
@@ -404,7 +404,7 @@ overload(function () {
 })();
 ```
 
-### Instanceof for Serialized objects###
+###Instanceof for Serialized objects###
 Check if serialised object is instance of a particular constructor.
 
 ```javascript
@@ -467,7 +467,7 @@ overload(function (sUser1, sIssue1, User, Issue) {
 })(sUser1, sIssue1, User, Issue);
 ```
 
-### Playground###
+###Playground###
 Just a rough playground.
 
 ```javascript
@@ -577,14 +577,14 @@ console.log(3 + 44 + 100);
 run(v1, v2, v3);
 ```
 
-## Dev Tips##
+##Dev Tips##
 For all those who are contributing or ones who wants to see debug info can run via:
 ```bash
  OVERLOAD_DEBUG=true node <program>.js
 ```
 Above will print the **AST** and **transformed code**.
 
-## Backwards Compatibility##
+##Backwards Compatibility##
 For pre 0.5 backwards compatibility do `require('operator-overloading/global')` and `enableOverloading` will work as expected, however this is **not recommended** as it pollutes a host object.
 
 ##Revision History##
